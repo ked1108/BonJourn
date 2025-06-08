@@ -3,7 +3,7 @@ import "./Calendar.css";
 
 const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-const Calendar = ({ selectedDate, onDateChange }) => {
+const Calendar = ({ selectedDate, onDateChange, highlightedDates = [] }) => {
     const today = new Date();
     const [currentDate, setCurrentDate] = useState(new Date());
 
@@ -25,6 +25,10 @@ const Calendar = ({ selectedDate, onDateChange }) => {
         day === today.getDate() &&
         month === today.getMonth() &&
         year === today.getFullYear();
+
+    const isHighlighted = (date) =>
+        highlightedDates.includes(date.toDateString());
+
 
     const isSelected = (day) => {
         return (
@@ -71,6 +75,7 @@ const Calendar = ({ selectedDate, onDateChange }) => {
                                 key={day}
                                 className={`calendar-day
                                     ${isToday(day) ? "today" : ""}
+                                    ${isHighlighted(new Date(year, month, day)) ? 'highlighted' : ''}
                                     ${isSelected(day) ? "selected" : ""}
                                 `}
                                 onClick={() => handleSelectDate(day)}

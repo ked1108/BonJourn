@@ -9,7 +9,6 @@
     color: #000;
 }
 
-/* Header with buttons and title */
 .calendar-header {
     padding: 1rem;
     display: flex;
@@ -23,7 +22,6 @@
     margin-bottom: 1rem;
 }
 
-/* Navigation buttons */
 .calendar-header button {
     background-color: rgba(255, 255, 255, 0.3);
     border: none;
@@ -34,21 +32,18 @@
     backdrop-filter: blur(4px);
 }
 
-/* Month name */
 .calendar-header h3 {
     margin: 0;
     font-size: 1.2rem;
     font-family: 'Inter', serif;
 }
 
-/* Grid for days */
 .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     gap: 5px;
 }
 
-/* Day names (Sun, Mon...) */
 .calendar-day-name {
     font-weight: bold;
     text-align: center;
@@ -58,7 +53,6 @@
     backdrop-filter: blur(6px);
 }
 
-/* Calendar cells */
 .calendar-day {
     padding: 0.7rem 0;
     border-radius: 5px;
@@ -74,18 +68,21 @@
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Highlight today */
 .calendar-day.today {
-    background-color: rgba(255, 228, 181, 0.6); /* peach tone */
+    background-color: rgba(255, 228, 181, 0.6);
     font-weight: bold;
 }
 
-/* Highlight selected date */
-.calendar-day.selected {
-    background-color: rgba(173, 216, 230, 0.6); /* light blue */
+.calendar-day.highlighted {
+    background-color: #f6b6a8;
+    /*border-radius: 50%;*/
+    font-weight: bold;
 }
 
-/* Placeholder for offset days */
+.calendar-day.selected {
+    background-color: rgba(173, 216, 230, 0.6);
+}
+
 .calendar-day.empty {
     visibility: hidden;
 }

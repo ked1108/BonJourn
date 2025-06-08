@@ -27,6 +27,10 @@ const Home = () => {
         );
     };
 
+    const pendingTaskDates = tasks
+        .filter(task => !task.done)
+        .map(task => new Date(task.date).toDateString());
+
     useEffect(() => {
         const ft = tasks.filter(task => isSameDate(task.date, selectedDate));
         const fj = entries.filter(entry => isSameDate(entry.date, selectedDate));
@@ -39,7 +43,7 @@ const Home = () => {
         <HeroBanner title={"Welcome to BonJourn"} subtitle={"Plan your tasks. Reflect your thoughts."} backgroundImage={hero} />
         <div className="home-container">
             <div className="calendar-section">
-                <Calendar selectedDate={selectedDate} onDateChange={setSelectedDate} />
+                <Calendar selectedDate={selectedDate} onDateChange={setSelectedDate} highlightedDates={pendingTaskDates}/>
             </div>
 
             <div className="tabbed-panel glass-box">
