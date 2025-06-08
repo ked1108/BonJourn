@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "date": "2025-06-07",
+    "title": "Morning Thoughts",
+    "content": "Had a peaceful morning walk."
+  },
+  {
+    "id": 2,
+    "date": "2025-06-06",
+    "title": "Work Reflection",
+    "content": "Finished the project milestone."
+  },
+  {
+    "id": 3,
+    "date": "2025-06-05",
+    "title": "Evening Journal",
+    "content": "Read a good book before sleep."
+  }
+]

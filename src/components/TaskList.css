@@ -1,0 +1,21 @@
+.tasklist {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.tasklist h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.tasklist ul {
+    list-style: none;
+    padding: 0;
+}
+
+.tasklist li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
