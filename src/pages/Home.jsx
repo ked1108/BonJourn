@@ -11,11 +11,13 @@ import hero from  '../assets/hero.jpg';
 import './Home.css';
 
 const Home = () => {
-    const [activeTab, setActiveTab] = useState('tasks');
-    const [selectedDate, setSelectedDate] = useState(new Date());
-    const { tasks, setTasks } = useContext(TaskContext);
-    const { entries, setEntries } = useContext(JournalContext);
+    const { tasks } = useContext(TaskContext);
+    const { entries } = useContext(JournalContext);
 
+    const [filteredTasks, setFilteredTasks] = useState([]);
+    const [filteredJournals, setFilteredJournals] = useState([]);
+    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [activeTab, setActiveTab] = useState('tasks');
 
     const isSameDate = (date1, date2) => {
         return (
@@ -26,13 +28,12 @@ const Home = () => {
     };
 
     useEffect(() => {
-        const filteredTasks = tasks.filter(task => isSameDate(task.date, selectedDate));
-        const filteredJournals = entries.filter(entry => isSameDate(entry.date, selectedDate));
+        const ft = tasks.filter(task => isSameDate(task.date, selectedDate));
+        const fj = entries.filter(entry => isSameDate(entry.date, selectedDate));
 
-        setTasks(filteredTasks);
-        setEntries(filteredJournals);
-    }, [selectedDate]);
-
+        setFilteredTasks(ft);
+        setFilteredJournals(fj);
+    }, [selectedDate, tasks, entries]);
     return (
     <div>
         <HeroBanner title={"Welcome to BonJourn"} subtitle={"Plan your tasks. Reflect your thoughts."} backgroundImage={hero} />
@@ -59,9 +60,9 @@ const Home = () => {
 
                 <div className="tab-content">
                     {activeTab === 'tasks' ? (
-                        <TaskList tasks={tasks} />
+                        <TaskList tasks={filteredTasks} />
                     ) : (
-                        <JournalList entries={entries} />
+                        <JournalList entries={filteredJournals} />
                     )}
                 </div>
             </div>
