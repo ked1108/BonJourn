@@ -16,6 +16,31 @@
 }
 
 .tasklist li {
-    padding: 0.5rem 0;
+    padding: 1rem;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.task-item {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.24);
+    transition: background-color 0.3s;
+    position: relative;
+    border-left: 6px solid transparent;
+}
+
+.task-item.done {
+    opacity: 0.6;
+}
+
+.task-item.done .task-title {
+    text-decoration: line-through;
+    color: #555;
 }

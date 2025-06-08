@@ -24,6 +24,7 @@ const TaskPage = () => {
 
         const newTask = {
             id: Date.now(),
+            done: false,
             ...form,
         };
 
@@ -38,7 +39,17 @@ const TaskPage = () => {
             <div className="task-page">
                 <div className="task-content">
                     <div className="task-list-section">
-                        <TaskList tasks={tasks} />
+                        <TaskList tasks={[...tasks].sort((a, b) => {
+                            const dateA = new Date(a.date);
+                            const dateB = new Date(b.date);
+
+                            if (dateA.getTime() !== dateB.getTime()) {
+                                return dateA - dateB;
+                            }
+
+                            const priorityOrder = { High: 1, Medium: 2, Low: 3 };
+                            return priorityOrder[a.priority] - priorityOrder[b.priority];
+                        })} />
                     </div>
 
                     <form className="task-form" onSubmit={handleSubmit}>

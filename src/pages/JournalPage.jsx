@@ -33,7 +33,7 @@ const JournalPage = () => {
             <div className="journal-page">
                 <div className="journal-content">
                     <div className="journal-list-section">
-                        <JournalList entries={entries} />
+                        <JournalList entries={[...entries].sort((a, b) => new Date(b.date) - new Date(a.date))} />
                     </div>
 
                     <form className="journal-form" onSubmit={handleSubmit}>
