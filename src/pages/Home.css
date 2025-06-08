@@ -44,14 +44,12 @@
     flex-wrap: wrap;
 }
 
-/* Calendar Panel */
 .calendar-section {
     flex: 1;
     min-width: 300px;
     max-width: 400px;
 }
 
-/* Right Panel with Tabs */
 .tabbed-panel {
     flex: 2;
     display: flex;
@@ -60,7 +58,6 @@
     min-width: 300px;
 }
 
-/* Tabs */
 .tabs {
     display: flex;
     gap: 1rem;
@@ -92,7 +89,6 @@
     flex-grow: 1;
 }
 
-/* 📱 Mobile Responsiveness */
 @media (max-width: 768px) {
     .home-container {
         flex-direction: column;

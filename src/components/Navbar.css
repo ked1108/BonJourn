@@ -11,14 +11,12 @@
     position: relative;
 }
 
-/* Brand */
 .navbar-brand {
     font-weight: 700;
     font-size: 1.5rem;
     color: #333;
 }
 
-/* Links container */
 .nav-links {
     display: flex;
     gap: 1.5rem;
@@ -38,7 +36,6 @@
     background-color: rgba(0, 0, 255, 0.15);
 }
 
-/* Hamburger button - hidden on desktop */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -58,7 +55,6 @@
     transition: 0.3s;
 }
 
-/* Animate hamburger to X when open */
 .hamburger .bar.open:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }

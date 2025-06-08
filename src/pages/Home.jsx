@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import Calendar from '../components/Calendar';
 import TaskList from '../components/TaskList';
 import JournalList from '../components/JournalList';

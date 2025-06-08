@@ -75,7 +75,6 @@
 
 .calendar-day.highlighted {
     background-color: #f6b6a8;
-    /*border-radius: 50%;*/
     font-weight: bold;
 }
 

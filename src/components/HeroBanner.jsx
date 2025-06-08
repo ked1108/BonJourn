@@ -1,4 +1,3 @@
-import React from 'react';
 import './HeroBanner.css';
 
 const HeroBanner = ({ title, subtitle, backgroundImage }) => {

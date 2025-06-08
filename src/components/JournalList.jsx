@@ -1,5 +1,3 @@
-import React from 'react';
-// import entries from '../data/journal_entries.json';
 import './JournalList.css';
 
 const JournalList = ({ entries }) => {

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import { useState, useContext } from 'react';
 import JournalList from '../components/JournalList';
 import HeroBanner from "../components/HeroBanner.jsx";
 import { JournalContext } from '../context/JournalContext';
