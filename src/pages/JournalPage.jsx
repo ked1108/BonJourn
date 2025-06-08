@@ -3,6 +3,7 @@ import JournalList from '../components/JournalList';
 import HeroBanner from "../components/HeroBanner.jsx";
 import { JournalContext } from '../context/JournalContext';
 import './JournalPage.css';
+import journalImg from '../assets/journal.jpg'
 
 const JournalPage = () => {
     const {entries, setEntries} = useContext(JournalContext);
@@ -28,7 +29,7 @@ const JournalPage = () => {
 
     return (
         <div>
-            <HeroBanner title={"Your Journal 📒"} subtitle={""} backgroundImage={'/src/assets/journal.jpg'} />
+            <HeroBanner title={"Your Journal 📒"} subtitle={""} backgroundImage={journalImg} />
             <div className="journal-page">
                 <div className="journal-content">
                     <div className="journal-list-section">

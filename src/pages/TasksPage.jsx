@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import TaskList from '../components/TaskList';
+import HeroBanner from "../components/HeroBanner.jsx";
 import { TaskContext } from '../context/TaskContext';
 
-
+import taskImg from '../assets/tasks.jpg'
 import './TasksPage.css';
-import HeroBanner from "../components/HeroBanner.jsx";
 
 const TaskPage = () => {
     const { tasks, setTasks } = useContext(TaskContext);
@@ -34,7 +34,7 @@ const TaskPage = () => {
 
     return (
         <div>
-            <HeroBanner title={"Your Tasks 🎯"} subtitle={""} backgroundImage={'/src/assets/tasks.jpg'} />
+            <HeroBanner title={"Your Tasks 🎯"} subtitle={""} backgroundImage={taskImg} />
             <div className="task-page">
                 <div className="task-content">
                     <div className="task-list-section">

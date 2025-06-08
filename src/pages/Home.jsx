@@ -7,6 +7,7 @@ import HeroBanner from "../components/HeroBanner.jsx";
 import { TaskContext } from '../context/TaskContext';
 import { JournalContext } from '../context/JournalContext';
 
+import hero from  '../assets/hero.jpg';
 import './Home.css';
 
 const Home = () => {
@@ -34,7 +35,7 @@ const Home = () => {
 
     return (
     <div>
-        <HeroBanner title={"Welcome to BonJourn"} subtitle={"Plan your tasks. Reflect your thoughts."} backgroundImage={'/src/assets/hero.jpg'} />
+        <HeroBanner title={"Welcome to BonJourn"} subtitle={"Plan your tasks. Reflect your thoughts."} backgroundImage={hero} />
         <div className="home-container">
             <div className="calendar-section">
                 <Calendar selectedDate={selectedDate} onDateChange={setSelectedDate} />
